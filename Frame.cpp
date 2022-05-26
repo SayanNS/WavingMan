@@ -9,7 +9,7 @@ Frame::Frame() : frame({1, 1, 0, 0, 0})
 {
 }
 
-Frame::Frame(struct frame frame) : frame(frame)
+Frame::Frame(struct frame_struct frame) : frame(frame)
 {
 }
 
@@ -17,7 +17,7 @@ FrameGroup::FrameGroup() : Frame()
 {
 }
 
-FrameGroup::FrameGroup(struct frame frame) : Frame(frame)
+FrameGroup::FrameGroup(struct frame_struct frame) : Frame(frame)
 {
 }
 

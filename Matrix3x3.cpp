@@ -33,7 +33,7 @@ Matrix3x3 Matrix3x3::operator*(Matrix3x3 multiplier) const
 	return model;
 }
 
-Matrix3x3::Matrix3x3(frame frame)
+Matrix3x3::Matrix3x3(frame_struct frame)
 {
 	array[0][0] = frame.scale.x * cos(frame.angle);
 	array[0][1] = -(frame.scale.x * sin(frame.angle));

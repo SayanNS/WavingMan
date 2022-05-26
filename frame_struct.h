@@ -2,8 +2,8 @@
 // Created by sayan on 28.04.2022.
 //
 
-#ifndef CONNECTIVEGAMES_FRAME_H
-#define CONNECTIVEGAMES_FRAME_H
+#ifndef CONNECTIVEGAMES_FRAME_STRUCT_H
+#define CONNECTIVEGAMES_FRAME_STRUCT_H
 
 
 struct Vector2
@@ -12,7 +12,7 @@ struct Vector2
 	float y;
 };
 
-struct frame
+struct frame_struct
 {
 	Vector2 scale;
 	float angle;
@@ -20,4 +20,4 @@ struct frame
 };
 
 
-#endif //CONNECTIVEGAMES_FRAME_H
+#endif //CONNECTIVEGAMES_FRAME_STRUCT_H

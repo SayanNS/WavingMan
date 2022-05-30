@@ -1,5 +1,5 @@
 #include "glad/glad.h"
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include "Human.h"
 #include "Renderer.h"
 #include <iostream>

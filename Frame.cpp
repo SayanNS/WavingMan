@@ -13,11 +13,17 @@ Frame::Frame(struct frame_struct frame) : frame(frame)
 {
 }
 
-FrameGroup::FrameGroup() : Frame()
+void Frame::setVisible(bool visible)
 {
+	this->visible = visible;
 }
 
-FrameGroup::FrameGroup(struct frame_struct frame) : Frame(frame)
+bool Frame::isVisible() const
+{
+	return visible;
+}
+
+FrameGroup::FrameGroup() : Frame()
 {
 }
 
@@ -36,6 +42,10 @@ void Frame::rotate(float angle)
 	this->frame.angle = angle;
 }
 
+FrameGroup::FrameGroup(struct frame_struct frame) : Frame(frame)
+{
+}
+
 void FrameGroup::addChild(Drawable *child)
 {
 	children.push_back(child);
@@ -46,6 +56,7 @@ void FrameGroup::onDraw(Matrix3x3 &parentModel)
 	Matrix3x3 model = parentModel * Matrix3x3(frame);
 
 	for (Drawable *child : children) {
-		child->onDraw(model);
+		if (child->isVisible())
+			child->onDraw(model);
 	}
 }

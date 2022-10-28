@@ -22,6 +22,7 @@ public:
 	void scale(Vector2 scale);
 	void rotate(float angle);
 
+	void setVisible(bool visible);
 	bool isVisible() const;
 	
 protected:

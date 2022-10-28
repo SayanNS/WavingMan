@@ -10,15 +10,11 @@
 #include <vector>
 
 
-class Drawable
+class Frame
 {
 public:
 	virtual void onDraw(Matrix3x3 &model) = 0;
-};
 
-class Frame : public Drawable
-{
-public:
 	Frame();
 	Frame(struct frame_struct frame);
 
@@ -40,7 +36,7 @@ public:
 	void onDraw(Matrix3x3 &model) override;
 
 private:
-	std::vector<Drawable *> children;
+	std::vector<Frame *> children;
 };
 
 

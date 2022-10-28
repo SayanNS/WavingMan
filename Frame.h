@@ -22,8 +22,11 @@ public:
 	void scale(Vector2 scale);
 	void rotate(float angle);
 
+	bool isVisible() const;
+	
 protected:
 	struct frame_struct frame;
+	bool visible;
 };
 
 class FrameGroup : public Frame
